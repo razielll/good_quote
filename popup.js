@@ -1,17 +1,10 @@
 'use strict';
 
-
-// quoteEl.textContent = getQuote();
-
-
-// function refreshQuote() {
-//     getQuote();
-// };
+let refreshEl = document.querySelector('.new-quote');
+let quoteEl = document.querySelector('.good-quote');
 
 
-var somequote = "Genius is one percent inspiration and ninety-nine percent perspiration";
-
-var quotes = [
+let quotes = [
     {
         "text": "Genius is one percent inspiration and ninety-nine percent perspiration.",
         "author": "Thomas Edison"
@@ -6587,81 +6580,25 @@ var quotes = [
 ];
 
 
+refreshEl.onclick = refreshQuote;
+
+function refreshQuote() {
+    refreshEl.classList.add('rotate360');
+    setTimeout(function removeAnim() {
+        refreshEl.classList.remove('rotate360');
+        getQuote();
+    }, 225)
+}
+
 function getQuote() {
-    var quoteEl = document.querySelector('.good-quote');
-
-    // let idx = getRandomArbitrary();
-    // let quote = quotes[idx];
-    // quoteEl.textContent = quotes;
-
-    // return quotes[0].text;
-    // quoteEl.innerHTML = somequote;
-    // quoteEl.textContent = 'hi';
-    // return String(somequote);
-    // quoteEl.textContent = 'Genius is one percent inspiration and ninety-nine percent perspiration';
-    quoteEl.textContent = quotes[2].text;
-    // return 'Genius is one percent inspiration and ninety-nine percent perspiration';
+    let idx = getRandomArbitrary();
+    quoteEl.textContent = quotes[idx].text;
 };
 
-getQuote();
 
 
 function getRandomArbitrary() {
     return Math.floor(Math.random() * quotes.length);
 };
 
-
-
-// window.onload = function () {
-//     console.log('%cALT+CLICK any text to copy and append to clipboard', 'color: #cc00cc;, padding: 16px; font-size: 20px; font-weight: bold');
-
-    // let TXTS = [];
-    // document.body.addEventListener('click', handleClickForCopy, {
-    //     capture: true,
-    //     passive: false
-    // });
-
-    // let removeTxt = currTxt => TXTS = TXTS.filter(txt => currTxt !== txt);
-
-
-    // function handleClickForCopy(e) {
-    //     if (!e.altKey || typeof e.target.textContent !== 'string') return;
-
-    //     e.stopPropagation(); // We dont wan't other events firing
-    //     e.preventDefault(); // Prevents link/acnhor opening on alt click
-    //     let txtContent = e.target.textContent;
-
-    //     let isToggle = e.target.classList.toggle('tooltip');
-
-    //     isToggle ? TXTS.push(txtContent) : removeTxt(txtContent);
-
-    //     copyText();
-    // };
-
-    // function copyText() {
-    //     let inputEl = document.createElement('input');
-    //     inputEl.classList.add('temp-input-holder');
-    //     document.body.appendChild(inputEl);
-    //     inputEl.value = TXTS.join(' ') || ' ';
-    //     inputEl.select();
-    //     document.execCommand("copy");
-    //     return setTimeout(function () {
-    //         inputEl.remove();
-    //     }, 50);
-    // };
-// }();
-
-
-//   "default_icon": {
-//     "16": "images/img16.png",
-//     "32": "images/img32.png",
-//     "48": "images/img48.png",
-//     "128": "images/img128.png"
-// }
-// },
-// "icons": {
-// "16": "images/img16.png",
-// "32": "images/img32.png",
-// "48": "images/img48.png",
-// "128": "images/img128.png"
-// },
+getQuote();

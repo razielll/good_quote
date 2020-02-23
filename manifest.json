@@ -9,5 +9,11 @@
         "default_title": "Good Quote",
         "default_popup": "popup.html"
     },
+    "icons": {
+        "16": "assets/q16.png",
+        "32": "assets/q32.png",
+        "48": "assets/q48.png",
+        "128": "assets/q128.png"
+    },
     "manifest_version": 2
 }

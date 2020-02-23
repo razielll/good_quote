@@ -3,12 +3,45 @@
 
 <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 8px;
+            max-width: 345px;
+        }
+
+        .good-quote {
+            width: 50ch;
+            max-width: 100%;
+            font-size: 1.25rem;
+            font-family: 'Lato', 'Arial', sans-serif;
+            font-style: italic;
+        }
+
+        .new-quote {
+            margin: 30px auto 10px;
+            display: block;
+            transform: rotate(0deg);
+            transition: .225s all ease-out;
+        }
+
+        .rotate360 {
+            transform: rotate(360deg);
+        }
+    </style>
 </head>
 
-<body style="width: 300px">
+<body>
     <div class="good-quote"></div>
 
-<script src="popup.js" type="text/javascript"></script>
+    <img src="assets/refresh.jpg" width=42 height=42 alt="get new quote" class="new-quote" title="Get new quote">
 
+    <script src="popup.js" type="text/javascript"></script>
 </body>
+
 </html>
