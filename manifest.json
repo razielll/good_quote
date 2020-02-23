@@ -1,0 +1,13 @@
+{
+    "name": "Good Quote",
+    "version": "1.0.0",
+    "description": "Good Quote - Get inspirted & motivated",
+    "permissions": [
+        "activeTab"
+    ],
+    "browser_action": {
+        "default_title": "Good Quote",
+        "default_popup": "popup.html"
+    },
+    "manifest_version": 2
+}
