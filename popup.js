@@ -2,9 +2,10 @@
 
 let refreshEl = document.querySelector('.new-quote');
 let quoteEl = document.querySelector('.good-quote');
+let authorEl = document.querySelector('.author');
 
 
-let quotes = [
+const quotes = [
     {
         "text": "Genius is one percent inspiration and ninety-nine percent perspiration.",
         "author": "Thomas Edison"
@@ -6592,10 +6593,9 @@ function refreshQuote() {
 
 function getQuote() {
     let idx = getRandomArbitrary();
+    authorEl.textContent = quotes[idx].author;
     quoteEl.textContent = quotes[idx].text;
 };
-
-
 
 function getRandomArbitrary() {
     return Math.floor(Math.random() * quotes.length);

@@ -13,19 +13,22 @@
             margin: 0;
             padding: 8px;
             max-width: 345px;
+            height: 280px;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Lato', 'Arial', sans-serif;
         }
 
         .good-quote {
             width: 50ch;
+            padding-top: 4px;
             max-width: 100%;
             font-size: 1.25rem;
-            font-family: 'Lato', 'Arial', sans-serif;
-            font-style: italic;
         }
 
         .new-quote {
-            margin: 30px auto 10px;
-            display: block;
+            align-self: center;
+            margin-top: auto;
             transform: rotate(0deg);
             transition: .225s all ease-out;
         }
@@ -33,11 +36,20 @@
         .rotate360 {
             transform: rotate(360deg);
         }
+
+        .author {
+            font-size: .8rem;
+            color: darkgrey;
+            text-align: right;
+            font-style: italic;
+            padding-top: 12px;
+        }
     </style>
 </head>
 
 <body>
     <div class="good-quote"></div>
+    <div class="author"></div>
 
     <img src="assets/refresh.jpg" width=42 height=42 alt="get new quote" class="new-quote" title="Get new quote">
 
